@@ -1,9 +1,9 @@
 .section_header {
-    width: 25%;
+    width: 23%;
     display: flex;
     overflow: hidden;
     position: relative;
-    padding: 20px;
+    padding: 0px;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
@@ -17,7 +17,9 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* box-shadow: 10px 0px 15px; */
+    justify-content: space-between;
+    height: 100%;
+    padding: 0;
 }
 
 .img_perso img {
@@ -30,12 +32,6 @@ nav {
     border: 3px solid #D72323;
 }
 
-.section_header h3 {
-    font-size: 20px;
-    text-align: center;
-    margin: 10px;
-}
-
 .img_perso {
     width: 100%;
     display: flex;
@@ -43,5 +39,48 @@ nav {
     flex-direction: column;
     border: 1px solid #fff;
     border-width: 0 0 1px 0;
-    padding: 5%;
+    padding: 30px 5% 60px;
+}
+.menu {
+    width: 100%;
+}
+
+ul.listmenu {
+    padding: 0px;
+    list-style-type: none;
+    font-size: 21px;
+    text-align:center
+}
+ul.listmenu li{
+    padding:10px;
+    background:#d723230f;
+    margin-block: 10px;
+    position:relative;
+    cursor:pointer;
+    
+}
+ul.listmenu li:before{
+    content:"";
+    height:100%;
+    width:0%;
+    position:absolute;
+    background:#d7232326;
+    left:0px;
+    top:0px;
+    bottom:0px;
+    margin:auto;
+    z-index:-1;
+    transition:all 0.4s ease-in-out
+}
+ul.listmenu li:hover:before, ul.listmenu li.active:before{
+    width:100%;
+}
+ul.listmenu a{
+    text-decoration: unset;
+    color: rgba(255, 255, 255, 0.479);
+    font-family: "Nunito";
+    text-transform: uppercase;
+}
+ul.listmenu li.active a,ul.listmenu li a:hover{
+    color: #fff;
 }
