@@ -12,7 +12,7 @@
     box-shadow: 5px 0px 5px #d723234f;
     background-color: #222222;
 }
-.App.col-md-9 {
+.pagecurrent.col-md-9 {
     margin-right: 0px ;
     margin-left: auto;
     display: flex;
@@ -59,7 +59,7 @@ ul.listmenu {
     text-align:center
 }
 ul.listmenu li{
-    padding:10px;
+    
     background:#d723230f;
     margin-block: 10px;
     position:relative;
@@ -79,6 +79,14 @@ ul.listmenu li:before{
     z-index:-1;
     transition:all 0.4s ease-in-out
 }
+ul.listmenu li a{
+    width:100%;
+    text-align:center;
+    padding:10px;
+}
+ul.listmenu li{
+    display:flex;
+}
 ul.listmenu li:hover:before, ul.listmenu li.active:before{
     width:100%;
 }
@@ -91,4 +99,10 @@ ul.listmenu a{
 }
 ul.listmenu li.active a,ul.listmenu li:hover a{
     color: #fff;
+}
+.name_cpy{
+    font-weight: 700;
+    text-transform:capitalize ;
+    letter-spacing: 0.02cm;
+    margin-left: 10px;
 }

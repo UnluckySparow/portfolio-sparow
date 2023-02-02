@@ -1,0 +1,42 @@
+/* for all page */
+
+.pagecurrent {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* pallet color */
+.firstcolor{
+    color:#D72323
+  }
+
+/* Home page */
+.h1_pres span.firstcolor {
+    opacity: 0.6;
+}
+
+.h1_pres span.firstcolor {
+    opacity: 0.6;
+}
+
+h1.h1_pres {
+    font-family: Nunito,sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color:#a4acc4
+}
+
+.section_content {
+    width: 80%;
+    margin: auto;
+}
+
+.section_content p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin-top: 15px;
+    text-align: center;
+    color:#a4acc4
+}
