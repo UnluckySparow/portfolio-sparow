@@ -7,6 +7,13 @@
     align-items: center;
     justify-content: center;
 }
+/* background video */
+.vidbg {
+    position: fixed;
+    z-index: -1;
+    opacity: 0.2;
+    object-fit: cover;
+}
 /* pallet color */
 .firstcolor{
     color:#D72323
@@ -40,3 +47,31 @@ h1.h1_pres {
     text-align: center;
     color:#a4acc4
 }
+
+.listres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    text-align: center;
+    padding: 0px;
+
+}
+
+.listres li {
+    width: max-content;
+    margin-inline:10px;
+    transition:all 0.5s ;
+    cursor:pointer
+}
+ul.listres li:hover {
+    transform: translateY(-5px);
+}
+.listres li a{
+    color: #a4acc4;
+    font-size: 30px;
+}
+.listres li a:hover{
+    color: #fff;
+}
+

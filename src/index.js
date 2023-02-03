@@ -9,12 +9,15 @@ import { Route,BrowserRouter,Routes } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import Navbar from './navbar/Navbar';
 import './App.css';
-import './styles/pages.css'
+import './styles/pages.css';
+import Videobg from './Videobg';
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
         <Navbar />
+        <Videobg/>
         <Routes>
           <Route exact path="/" element={<Home/>}></Route>
           <Route exact path="/contact" element={<Contact/>}></Route>
