@@ -18,7 +18,9 @@
 .firstcolor{
     color:#D72323
   }
-
+p{
+    color: #a4acc4;
+}
 /* Home page */
 .h1_pres span.firstcolor {
     opacity: 0.6;
@@ -27,9 +29,11 @@
 .h1_pres span.firstcolor {
     opacity: 0.6;
 }
-
+h1{
+    font-family: "Nunito",sans-serif;
+    font-weight: 500;
+}
 h1.h1_pres {
-    font-family: Nunito,sans-serif;
     font-weight: 700;
     text-align: center;
     color:#a4acc4
@@ -73,5 +77,59 @@ ul.listres li:hover {
 }
 .listres li a:hover{
     color: #fff;
+}
+
+
+/* page about me  */
+.about-me{
+    width: 100%;
+}
+h2.title_aboutme{
+    text-align: left ;
+    text-transform: uppercase;
+    position: relative;
+    font-family: cursive;
+    color: #a4acc4;
+
+}
+h2.title_aboutme span{
+    position: relative;
+    z-index: 10;
+}
+h2.title_aboutme span:before, h2.title_aboutme span:after{
+    content: "";
+    width: 40%;
+    height: 5px;
+    background-color: #D72323;
+    opacity: 0.2;
+    position: absolute;
+    bottom: -10px;
+    border-radius: 50px;
+    z-index: 1;
+}
+h2.title_aboutme span:after{
+    z-index: 2;
+    width: 20%;
+    background-color: #D72323;
+    opacity: 1;
+    left: 0;
+    animation: alternate infinite animmoveright 3s ease-in-out;
+}
+@keyframes animmoveright {
+    from{
+        width: 5%;
+    }
+    to{
+        width: 40%;
+    }
+}
+h2.title_aboutme:before{
+    content: "About-me";
+    font-family: cursive;
+    font-weight: 600;
+    font-size:clamp(24px, calc(24px + (70 - 24) * ((100vw - 360px) / 1400)), 70px) !important;
+    position: absolute;
+    top: 10px;
+    color:rgba(255, 255, 255, 0.048)
 }
 

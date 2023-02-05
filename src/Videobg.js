@@ -8,3 +8,7 @@ import Vidbg from "./assets/videos/backgroundvid.mp4"
     </div>
 )}
   export default Videobg;
+
+
+
+  
