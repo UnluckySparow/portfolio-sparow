@@ -1,4 +1,5 @@
 import React from 'react'
+import CV from '../assets/files/my-cv.pdf'
 // import infosperso from '../infos/About-me';
 export default function About() {
   
@@ -19,17 +20,16 @@ export default function About() {
             <p className='content_info'>
             I am a frontend web developer. I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations.
             </p>
-            <ul className='list_infos'>
-              <li>
-                <strong className='firstcolor'>Age : </strong>24 years
-              </li>
-              <li>
-                <strong className='firstcolor'>Nationality : </strong>Morrocan
-              </li>
-              <li>
-                <strong className='firstcolor'>City : </strong>Casablanca
-              </li>
-            </ul>
+            <table className='list_infos'>
+                <tr><td><strong className='firstcolor'>Age : </strong></td><td>24 years</td></tr>
+              <tr>
+              <td> <strong className='firstcolor'>Nationality : </strong></td><td>Morrocan</td>
+              </tr>
+              <tr>
+              <td> <strong className='firstcolor'>City : </strong> </td><td>Casablanca</td>
+             </tr>
+            </table>
+            <button href={CV} target={"_blank"} className='btn-cv'>View cv</button>
           </div>
         </div>
       </div>
@@ -37,3 +37,4 @@ export default function About() {
     </div>
   )
 }
+ 
