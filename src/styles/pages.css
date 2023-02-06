@@ -107,22 +107,32 @@ ul.listres li:hover {
 
 
 /* page about me  */
-.about-me{
+.content{
     width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: scroll;
+    padding-right: 15px;
+    position: relative;
 }
-h2.title_aboutme{
+h2.title_aboutme, h2.title_contactme{
     text-align: left ;
     text-transform: uppercase;
     position: relative;
     font-family: cursive;
     color: #a4acc4;
+    width: 100%;
 
 }
-h2.title_aboutme span{
+h2.title_aboutme span,h2.title_contactme span{
     position: relative;
     z-index: 10;
 }
-h2.title_aboutme span:before, h2.title_aboutme span:after{
+h2.title_aboutme span:before, h2.title_aboutme span:after, h2.title_contactme span:before, h2.title_contactme span:after{
     content: "";
     width: 40%;
     height: 5px;
@@ -133,7 +143,7 @@ h2.title_aboutme span:before, h2.title_aboutme span:after{
     border-radius: 50px;
     z-index: 1;
 }
-h2.title_aboutme span:after{
+h2.title_aboutme span:after, h2.title_contactme span:after{
     z-index: 2;
     width: 20%;
     background-color: #D72323;
@@ -149,7 +159,7 @@ h2.title_aboutme span:after{
         width: 40%;
     }
 }
-h2.title_aboutme:before{
+h2.title_aboutme:before, h2.title_contactme:before{
     content: "About-me";
     font-family: cursive;
     font-weight: 600;
@@ -162,7 +172,7 @@ h2.title_aboutme:before{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-top:40px
+    margin-top:40px;
 }
 
 .img_forme,.info {
@@ -198,23 +208,95 @@ table.list_infos {
     flex-wrap: wrap;
     margin-bottom : 20px;
 }
-.list_infos tr{
+
+.list_infos tr {
     width:100%;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
 }
 
-.list_infos td{
+.list_infos td {
     width:30%;
     font-size : 18px;
-    color:#a4acc4
+    color:#a4acc4;
     
 }
 .list_infos td:nth-child(2){
     margin-left:15px    
 }
+/* page contact  */
+h2.title_contactme:before{
+    content: "Contact-me";
+}
 
+.div_form {
+    padding: 20px 0px;
+    margin-block: 1%;
+    width: 100%;
+}
+
+.div_form input[type="text"], .div_form textarea, .div_form input[type="email"]{
+    background: transparent;
+    margin-block: 10px;
+    padding: 12px 12px 10px;
+    color: #fff;
+    font-size: 18px;
+    border: 1px #431e1e solid;
+    font-family: 'Lato';
+    font-weight: 500;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+}
+.div_form input[type="text"]:focus, .div_form textarea:focus, .div_form input[type="email"]:focus{
+    background:#d723232a;
+    border: 1px #431e1e solid !important;
+}
+.div_form label {
+    background: #431e1e;
+    padding: 2px 20px 5px;
+    font-family: cursive;
+    font-size: 15px;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+}
+
+.div_form form > div {
+    position: relative;
+    margin-block: 20px;
+}
+.div_form form div:last-child {
+    margin: 0px;
+    width: max-content;
+}
+
+input.btn-submit {
+    background:#d72323;
+    border:unset;
+    font-family:nunito,sans-serif;
+    font-size:17px;
+    text-transform:uppercase;
+    font-weight:500;
+    letter-spacing:2px;
+    padding:10px 35px 9px;
+    position:relative;
+}
+
+.div_form form div:last-child:before {
+    content:"";
+    background:#fff;
+    width:0%;
+    height:1px;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    z-index: 10;
+    transition:all 0.5s ease-in-out
+}
+.div_form form div:last-child:hover:before {
+    width:100%;
+}
 /* responsive */
 
 @media screen and (max-width : 1500px){

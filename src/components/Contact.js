@@ -16,15 +16,32 @@ export default function Contact() {
   };
   return (
     <div className='pagecurrent col-md-9'>
-      <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message" />
-        <input type="submit" value="Send" />
-      </form>
+      <div className='page-contact content'>
+      <h2 className='title_contactme'><span className='title'>Contact-me</span></h2>
+        <div className='div_form'>
+          <form ref={form} onSubmit={sendEmail}>
+            <div>
+              <label>Enter your name</label>
+              <input type="text" name="user_name" />
+            </div>
+            <div>
+              <label>Enter your mail</label>
+              <input type="email" name="user_email" />
+            </div>
+            <div>
+              <label>Enter your subject</label>
+              <input type="text" name="user_name" />
+            </div>
+            <div> 
+              <label>Enter your message</label>
+              <textarea name="message" />
+            </div>
+            <div> 
+              <input type="submit" className='btn-submit' value="Send" />
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   )
 }

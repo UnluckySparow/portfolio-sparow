@@ -11,8 +11,11 @@ import Navbar from './navbar/Navbar';
 import './App.css';
 import './styles/pages.css';
 import Videobg from './Videobg';
+import infosperso from './infos/About-me';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+const info  = JSON.parse(JSON.stringify(infosperso));
+console.log(info)
 root.render(
   <React.StrictMode>
     <BrowserRouter>

@@ -29,7 +29,7 @@ export default function About() {
               <td> <strong className='firstcolor'>City : </strong> </td><td>Casablanca</td>
              </tr>
             </table>
-            <a href={CV} target={"_blank"}>
+            <a href={CV} rel="noreferrer" target={"_blank"}>
             <button  className='btn-cv'>View cv</button>
             </a>
           </div>
