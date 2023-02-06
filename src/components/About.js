@@ -29,7 +29,9 @@ export default function About() {
               <td> <strong className='firstcolor'>City : </strong> </td><td>Casablanca</td>
              </tr>
             </table>
-            <button href={CV} target={"_blank"} className='btn-cv'>View cv</button>
+            <a href={CV} target={"_blank"}>
+            <button  className='btn-cv'>View cv</button>
+            </a>
           </div>
         </div>
       </div>
