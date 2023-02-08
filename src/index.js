@@ -11,15 +11,14 @@ import Navbar from './navbar/Navbar';
 import './App.css';
 import './styles/pages.css';
 import Videobg from './Videobg';
-import infosperso from './infos/About-me';
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import App from './App';
 
-const info  = JSON.parse(JSON.stringify(infosperso));
-console.log(info)
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
         <Navbar />
+        <App />
         <Videobg/>
         <Routes>
           <Route exact path="/" element={<Home/>}></Route>

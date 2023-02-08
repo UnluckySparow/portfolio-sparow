@@ -3,7 +3,7 @@
     display: flex;
     overflow: hidden;
     position: fixed;
-    padding: 0px;
+    padding: 0px 0px 15px ;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
@@ -105,4 +105,51 @@ ul.listmenu li.active a,ul.listmenu li:hover a{
     text-transform:capitalize ;
     letter-spacing: 0.02cm;
     margin-left: 10px;
+}
+button.head_header,.burger-menu{display: none;}
+/* responsive navbar */
+@media screen and (max-width:800px){
+    .section_header {
+        width: 100%;
+        z-index: 99;
+        background: #2222223b;
+        transform: translateY(-106%);
+        transition: all 1s ease-in-out;
+        box-shadow: unset;
+        opacity: 0;
+        backdrop-filter: blur(9px);
+    }
+    .showheader.section_header {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    button.head_header,.burger-menu{display: block;}
+    .burger-menu {
+        position: fixed;
+        top: 40px;
+        right: 0%;
+        z-index: 999;
+        transform: translatex(0%);
+        transition: all 1s ease-in-out;
+        opacity: 1;
+    }
+    .burger-menu.headbut{
+        transform: translatex(106%);
+        opacity: 0;
+    }
+    .burger-menu button {
+        background: #8c2020;
+        border: unset;
+        padding: 6px 14px;
+        font-size: 15px;
+    }
+    button.head_header {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        background: #462222;
+        border: unset;
+        cursor: pointer;
+        padding: 5px 10px;
+    }
 }

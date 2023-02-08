@@ -1,7 +1,7 @@
 /* for all page */
 
 .pagecurrent {
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -130,7 +130,7 @@ h2.title_aboutme, h2.title_contactme{
 }
 h2.title_aboutme span,h2.title_contactme span{
     position: relative;
-    z-index: 10;
+    z-index: 3;
 }
 h2.title_aboutme span:before, h2.title_aboutme span:after, h2.title_contactme span:before, h2.title_contactme span:after{
     content: "";
@@ -311,7 +311,16 @@ input.btn-submit {
         margin-block:10px
     } 
 }
-
+@media screen and (max-width : 800px){
+    .pagecurrent.col-md-9 {
+        padding: 20px;
+        width: 100%;
+    }
+    .pagecurrent {
+        height: unset;
+        overflow: unset;
+    }
+}
 @media screen and (max-width : 500px){
     .list_infos td{
         width:100%;

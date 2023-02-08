@@ -2,16 +2,28 @@ import React from 'react'
 import '../styles/Navbar.css'
 import mouadimg from "../assets/images/mouadimg.jpeg"
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
   const adminapp = 'mouad';
   const curentyear = new Date().getFullYear();
   const buttonClickHandler = (e) => {
     document.querySelectorAll('.listmenu li').forEach(i => {i.classList.remove('active')})
+    if(window.matchMedia("max-width:800px")){
+      document.querySelector('.section_header').classList.remove('showheader');
+    document.querySelector('.burger-menu').classList.remove('headbut');
+    }
     e.currentTarget.classList.add('active');
+
 };
+const headmobileheader = () =>{
+  document.querySelector('.section_header').classList.remove('showheader');
+  document.querySelector('.burger-menu').classList.remove('headbut');
+}
   return (
     <div className='section_header'>
+      <button onClick={headmobileheader} className="head_header"><FontAwesomeIcon icon={faXmark}/></button>
       <nav className='containernav'>
         <div className='img_perso'>
             <img src={mouadimg}  alt=""/>
