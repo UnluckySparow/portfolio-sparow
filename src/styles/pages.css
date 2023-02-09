@@ -6,6 +6,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    animation:alternate 0.8s ease-in-out charger;
+}
+@keyframes charger {
+    from{filter: blur(10px);transform: rotateX(90deg);}
+    to{filter: blur(0px);transform: rotateX(0deg);}
+
 }
 /* button  */
 button.btn-cv {
@@ -109,13 +115,12 @@ ul.listres li:hover {
 /* page about me  */
 .content{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    overflow-y: scroll;
     padding-right: 15px;
     position: relative;
 }
@@ -312,6 +317,11 @@ input.btn-submit {
     } 
 }
 @media screen and (max-width : 800px){
+    @keyframes charger {
+        from{filter: blur(10px);transform: translateY(100%);}
+        to{filter: blur(0px);transform: translateY(0%);}
+    
+    }
     .pagecurrent.col-md-9 {
         padding: 20px;
         width: 100%;
@@ -320,11 +330,32 @@ input.btn-submit {
         height: unset;
         overflow: unset;
     }
+    .list_infos td:nth-child(2) {
+        margin-left: 15px;
+    }
+    .div_form form > div:nth-child(4) {
+        margin-bottom: 0px;
+    }
 }
 @media screen and (max-width : 500px){
+    .section_content {
+        width: 100%;
+    }
     .list_infos td{
         width:100%;
         text-align:center;
+    }
+    .list_infos td:nth-child(2) {
+        margin-left: 0px;
+    }
+    .list_infos td {
+        text-align: left;
+    }
+    .info-about-me {
+        margin-top: 30px;
+    }
+    .info{
+        padding: 0%;
     }
 }
 
