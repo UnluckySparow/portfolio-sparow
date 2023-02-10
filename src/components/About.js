@@ -1,30 +1,34 @@
-import React, { useState } from 'react'
+import React from 'react'
 import CV from '../assets/files/my-cv.pdf'
-// import infosperso from '../infos/About-me';
+
+import secondimg from "../assets/images/me.jpeg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faMagnifyingGlassPlus, faXmark } from '@fortawesome/free-solid-svg-icons'
 export default function About() {
-  const [imgmodel,Setimgmodel]=useState(false);
-  const openModel = () =>{
-    Setimgmodel(!imgmodel);
+  const modalOpen = () => { 
+    document.querySelector('.modal_img').classList.add('showmodal');
+  }
+  const modalClose = () => { 
+    document.querySelector('.modal_img').classList.remove('showmodal');
   }
   return (
   
     <div className='pagecurrent col-md-9'>
+      <div className='modal_img'>
+            <button onClick={modalClose} className="close_modal"><FontAwesomeIcon icon={faXmark}/></button>
+            <div className='modal-div'>
+              <img src={secondimg}  alt="" className='myimg-modal'/>
+            </div>
+          </div>
       <div className='about-me content'>        
         <h2 className='title_aboutme'><span className='title'>About-me</span></h2>
         <div className='info-about-me'>
           <div className='img_forme'>
-            <button onClick={openModel}>Openmodel</button>
-            {(imgmodel && 
-              <div className='modal'>
-              <div className='overlay'></div>
-              <div className='model-content'>
-                Hello world
-                <button onClick={openModel}>Close</button>
-              </div>
-            </div>
-              )}
-            <h2> Image </h2>
+              <img src={secondimg}  alt="" className='myimg-aboutme'/>
+              <button className='zoom' onClick={modalOpen}><FontAwesomeIcon icon={faMagnifyingGlassPlus}/></button>
+              
           </div>
+          
           <div className='info'>
             <h3 className='h3_info'>I'm <span className='firstcolor'>Mouad Aithmidine</span></h3>
             <p className='content_info'>

@@ -112,7 +112,7 @@ button.head_header,.burger-menu{display: none;}
     .section_header {
         width: 100%;
         z-index: 99;
-        background: #2222223b;
+        background: #222222b8;
         transform: translateY(-106%);
         transition: all 1s ease-in-out;
         box-shadow: unset;
