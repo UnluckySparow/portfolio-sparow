@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/Navbar.css'
-import myimg from "../assets/images/my-img.jfif"
+import mouadimg from "../assets/images/my-img.jfif"
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
@@ -26,7 +26,7 @@ const headmobileheader = () =>{
       <button onClick={headmobileheader} className="head_header"><FontAwesomeIcon icon={faXmark}/></button>
       <nav className='containernav'>
         <div className='img_perso'>
-            <img src={myimg}  alt=""/>
+            <img src={mouadimg}  alt=""/>
         </div>
         <div className='menu'>
           <ul className="listmenu">

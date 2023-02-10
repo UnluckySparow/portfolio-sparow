@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="burger-menu">
-              <button onClick={buttonClickHandler}><FontAwesomeIcon icon={faBars}/></button>
+      <button className='buttonburger' onClick={buttonClickHandler}><FontAwesomeIcon icon={faBars}/></button>
     </div>
   );
 }

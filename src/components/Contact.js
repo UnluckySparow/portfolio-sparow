@@ -9,15 +9,15 @@ export default function Contact() {
 
     emailjs.sendForm('service_kw3evb5', 'template_s8pqd0b', form.current, 'gUiU8KbGqqlBhQswJ')
       .then((result) => {
-          console.log(result.text);
+          alert(result.text)
       }, (error) => {
-          console.log(error.text);
+        alert(error.text);
       });
   };
   return (
     <div className='pagecurrent col-md-9'>
       <div className='page-contact content'>
-      <h2 className='title_contactme'><span className='title'>Contact-me</span></h2>
+        <h2 className='title_contactme'><span className='title'>Contact-me</span></h2>
         <div className='div_form'>
           <form ref={form} onSubmit={sendEmail}>
             <div>
@@ -30,7 +30,7 @@ export default function Contact() {
             </div>
             <div>
               <label>Enter your subject</label>
-              <input type="text" name="user_name" />
+              <input type="text" name="subject" />
             </div>
             <div> 
               <label>Enter your message</label>
