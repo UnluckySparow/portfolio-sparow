@@ -1,19 +1,38 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const form = useRef();
+  const [username , setUsername]=useState();
+  const [mail , setMail]=useState();
+  const [subject , setSubject]=useState();
+  const [message , setMessage]=useState();
+  const [suc_inv,setSuc_inv]=useState('');
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    if(username && mail && subject && message){
     emailjs.sendForm('service_kw3evb5', 'template_s8pqd0b', form.current, 'gUiU8KbGqqlBhQswJ')
       .then((result) => {
-          alert(result.text)
+        console.log(result);
+        setUsername('');
+        setMail('');
+        setSubject('');
+        setMessage('');
+        setSuc_inv('Thank-you for your mail');
+        document.querySelector('.contact-done').classList.remove('inv')
+        document.querySelector('.contact-done').classList.add('succ')  
       }, (error) => {
-        alert(error.text);
+        console.log(error)
       });
-  };
+  }
+  else{
+    console.log("valider tous les champs");
+    setSuc_inv('Please, try again');
+    document.querySelector('.contact-done').classList.remove('succ')
+    document.querySelector('.contact-done').classList.add('inv')
+  }
+}
   return (
     <div className='pagecurrent col-md-9'>
       <div className='page-contact content'>
@@ -22,25 +41,28 @@ export default function Contact() {
           <form ref={form} onSubmit={sendEmail}>
             <div>
               <label>Enter your name</label>
-              <input type="text" name="user_name" />
+              <input autoComplete='off' type="text" name="user_name" value={username} onChange={(e) => setUsername(e.target.value)} />
             </div>
             <div>
               <label>Enter your mail</label>
-              <input type="email" name="user_email" />
+              <input autoComplete='off' type="email" name="user_email" value={mail} onChange={(e) => setMail(e.target.value)}/>
             </div>
             <div>
               <label>Enter your subject</label>
-              <input type="text" name="subject" />
+              <input autoComplete='off' type="text" name="subject" value={subject} onChange={(e) => setSubject(e.target.value)}/>
             </div>
             <div> 
               <label>Enter your message</label>
-              <textarea name="message" />
+              <textarea name="message" value={message} onChange={(e) => setMessage(e.target.value)}/>
             </div>
             <div> 
               <input type="submit" className='btn-submit' value="Send" />
             </div>
           </form>
         </div>
+        <div className='contact-done'>
+             {suc_inv}
+        </div>  
       </div>
     </div>
   )
