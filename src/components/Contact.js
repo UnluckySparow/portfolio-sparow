@@ -4,31 +4,38 @@ import emailjs from '@emailjs/browser';
 export default function Contact() {
   const form = useRef();
   const [username , setUsername]=useState();
-  const [mail , setMail]=useState();
-  const [subject , setSubject]=useState();
-  const [message , setMessage]=useState();
+  const [mail , setMail]=useState('');
+  const [subject , setSubject]=useState('');
+  const [message , setMessage]=useState('');
   const [suc_inv,setSuc_inv]=useState('');
-
   const sendEmail = (e) => {
     e.preventDefault();
     if(username && mail && subject && message){
-    emailjs.sendForm('service_kw3evb5', 'template_s8pqd0b', form.current, 'gUiU8KbGqqlBhQswJ')
-      .then((result) => {
-        console.log(result);
-        setUsername('');
+      const rgep = /^[a-zA-Z0-9._]+@[a-z]+\.[a-z]{2,6}$/;
+      if(rgep.test(mail)){
+        emailjs.sendForm('service_kw3evb5', 'template_s8pqd0b', form.current, 'gUiU8KbGqqlBhQswJ')
+        .then(() => {
+          setUsername('');
+          setMail('');
+          setSubject('');
+          setMessage('');
+          setSuc_inv('Thank-you for your mail');
+          document.querySelector('.contact-done').classList.remove('inv');
+          document.querySelector('.contact-done').classList.add('succ');
+        })
+      }
+
+      if(!rgep.test(mail)){
+        document.querySelector('.contact-done').classList.add('inv');
+        document.querySelector('.contact-done').classList.remove('succ');
         setMail('');
-        setSubject('');
-        setMessage('');
-        setSuc_inv('Thank-you for your mail');
-        document.querySelector('.contact-done').classList.remove('inv')
-        document.querySelector('.contact-done').classList.add('succ')  
-      }, (error) => {
-        console.log(error)
-      });
+        setSuc_inv('please try again, Email is not valid');
+      }
+    
   }
+
   else{
-    console.log("valider tous les champs");
-    setSuc_inv('Please, try again');
+    setSuc_inv('Please, you need to insert all option');
     document.querySelector('.contact-done').classList.remove('succ')
     document.querySelector('.contact-done').classList.add('inv')
   }
