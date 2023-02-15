@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/portfolio-sparow/static/css/main.0a437dfa.css",
+    "main.js": "/portfolio-sparow/static/js/main.6010d183.js",
+    "static/js/787.b7af92ad.chunk.js": "/portfolio-sparow/static/js/787.b7af92ad.chunk.js",
+    "static/media/backgroundvid.mp4": "/portfolio-sparow/static/media/backgroundvid.1a91cb3b32a539842dba.mp4",
+    "static/media/my-cv.pdf": "/portfolio-sparow/static/media/my-cv.26e60f25031be3af95e0.pdf",
+    "static/media/my-img.jfif": "/portfolio-sparow/static/media/my-img.01cfe4e20c2a5e02b00a.jfif",
+    "static/media/me.jpeg": "/portfolio-sparow/static/media/me.ea5311d90092d4396b42.jpeg",
+    "index.html": "/portfolio-sparow/index.html",
+    "main.0a437dfa.css.map": "/portfolio-sparow/static/css/main.0a437dfa.css.map",
+    "main.6010d183.js.map": "/portfolio-sparow/static/js/main.6010d183.js.map",
+    "787.b7af92ad.chunk.js.map": "/portfolio-sparow/static/js/787.b7af92ad.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a437dfa.css",
+    "static/js/main.6010d183.js"
+  ]
+}
