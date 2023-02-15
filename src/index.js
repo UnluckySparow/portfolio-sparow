@@ -21,7 +21,7 @@ root.render(
         <App />
         <Videobg/>
         <Routes>
-          <Route exact path="/portfolio-sparow" element={<Home/>}></Route>
+          <Route exact path="/" element={<Home/>}></Route>
           <Route exact path="/contact" element={<Contact/>}></Route>
           <Route exact path="/about-me" element={<About/>}></Route>
         </Routes>
