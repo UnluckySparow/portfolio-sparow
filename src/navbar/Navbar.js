@@ -20,9 +20,8 @@ const headmobileheader = () =>{
   document.querySelector('.section_header').classList.remove('showheader');
   document.querySelector('.burger-menu').classList.remove('headbut');
 }
-window.location.href = "/";
 
-  return (
+return (
     <div className='section_header'>
       <button onClick={headmobileheader} className="head_header"><FontAwesomeIcon icon={faXmark}/></button>
       <nav className='containernav'>
@@ -37,7 +36,7 @@ window.location.href = "/";
           </ul>
         </div>
         <div className='copyright_div'>
-          © {curentyear} <span className='name_cpy'>{adminapp}</span>
+          © {curentyear} <span className='name_cpy'>Aithmidine Mouad</span>
         </div>
       </nav>
     </div>
