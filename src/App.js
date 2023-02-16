@@ -2,6 +2,7 @@
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { useEffect } from 'react';
 // import { useLocation } from 'react-router-dom';
 // import { useEffect } from 'react';
 
@@ -10,12 +11,19 @@ function App() {
     document.querySelector('.section_header').classList.add('showheader')
     document.querySelector('.burger-menu').classList.add('headbut');
   };
-// let location = useLocation();
-// useEffect(()=>{
-//   if(location.pathname === "/portfolio-sparow/"  ){
-//     window.location.href="/";
-//   }
-// })
+const { innerWidth: width } = window;
+let enterport =  0 ; 
+useEffect(()=>{
+  if(enterport === 0 ){
+    if(width <= 800){
+      document.querySelector(".section_header").classList.add("showheader");
+      document.querySelector('.burger-menu').classList.add('headbut');
+    }
+    enterport++;
+  }
+})
+
+
   return (
     <div className="burger-menu">
       <button className='buttonburger' onClick={buttonClickHandler}><FontAwesomeIcon icon={faBars}/></button>

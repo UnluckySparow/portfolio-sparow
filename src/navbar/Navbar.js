@@ -30,7 +30,7 @@ return (
         </div>
         <div className='menu'>
           <ul className="listmenu">
-            <li Link onClick={buttonClickHandler} className="active"><Link to="/">Home</Link></li>
+            <li Link onClick={buttonClickHandler} ><Link to="/">Home</Link></li>
             <li Link onClick={buttonClickHandler} ><Link to="/about-me">About - me</Link></li>
             <li Link onClick={buttonClickHandler} ><Link to="/contact">Contact - me</Link></li>
           </ul>
