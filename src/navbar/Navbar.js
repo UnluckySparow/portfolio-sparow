@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
-  const adminapp = 'mouad';
   const curentyear = new Date().getFullYear();
   const buttonClickHandler = (e) => {
     document.querySelectorAll('.listmenu li').forEach(i => {i.classList.remove('active')})
@@ -21,6 +20,8 @@ const headmobileheader = () =>{
   document.querySelector('.section_header').classList.remove('showheader');
   document.querySelector('.burger-menu').classList.remove('headbut');
 }
+window.location.href = "/";
+
   return (
     <div className='section_header'>
       <button onClick={headmobileheader} className="head_header"><FontAwesomeIcon icon={faXmark}/></button>
@@ -30,7 +31,7 @@ const headmobileheader = () =>{
         </div>
         <div className='menu'>
           <ul className="listmenu">
-            <li Link onClick={buttonClickHandler} ><Link to="/">Home</Link></li>
+            <li Link onClick={buttonClickHandler} className="active"><Link to="/">Home</Link></li>
             <li Link onClick={buttonClickHandler} ><Link to="/about-me">About - me</Link></li>
             <li Link onClick={buttonClickHandler} ><Link to="/contact">Contact - me</Link></li>
           </ul>
