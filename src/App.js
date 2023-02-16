@@ -11,11 +11,9 @@ function App() {
     document.querySelector('.burger-menu').classList.add('headbut');
   };
 let location = useLocation();
-alert (location.pathname);
 useEffect(()=>{
   if(location.pathname === "/portfolio-sparow/"  ){
-    // window.location.href="/";
-    alert ("done request");
+    window.location.href="/";
   }
 })
   return (
