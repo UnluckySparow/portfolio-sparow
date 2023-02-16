@@ -15,7 +15,7 @@ alert (location.pathname);
 useEffect(()=>{
   if(location.pathname === "/portfolio-sparow/"  ){
     // window.location.href="/";
-    alert ("done");
+    alert ("done request");
   }
 })
   return (
