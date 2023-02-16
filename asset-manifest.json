@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portofolio-sparow/static/css/main.0a437dfa.css",
-    "main.js": "/portofolio-sparow/static/js/main.1b2fde5b.js",
+    "main.js": "/portofolio-sparow/static/js/main.cd11e01c.js",
     "static/js/787.b7af92ad.chunk.js": "/portofolio-sparow/static/js/787.b7af92ad.chunk.js",
     "static/media/backgroundvid.mp4": "/portofolio-sparow/static/media/backgroundvid.1a91cb3b32a539842dba.mp4",
     "static/media/my-cv.pdf": "/portofolio-sparow/static/media/my-cv.26e60f25031be3af95e0.pdf",
@@ -9,11 +9,11 @@
     "static/media/me.jpeg": "/portofolio-sparow/static/media/me.ea5311d90092d4396b42.jpeg",
     "index.html": "/portofolio-sparow/index.html",
     "main.0a437dfa.css.map": "/portofolio-sparow/static/css/main.0a437dfa.css.map",
-    "main.1b2fde5b.js.map": "/portofolio-sparow/static/js/main.1b2fde5b.js.map",
+    "main.cd11e01c.js.map": "/portofolio-sparow/static/js/main.cd11e01c.js.map",
     "787.b7af92ad.chunk.js.map": "/portofolio-sparow/static/js/787.b7af92ad.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0a437dfa.css",
-    "static/js/main.1b2fde5b.js"
+    "static/js/main.cd11e01c.js"
   ]
 }
