@@ -11,10 +11,11 @@ function App() {
     document.querySelector('.burger-menu').classList.add('headbut');
   };
 let location = useLocation();
-alert("test");
+alert (location.pathname);
 useEffect(()=>{
-  if(location.pathname === "/portfolio-sparow/"){
-    window.location.href="/";
+  if(location.pathname === "/portfolio-sparow/"  ){
+    // window.location.href="/";
+    alert ("done");
   }
 })
   return (
