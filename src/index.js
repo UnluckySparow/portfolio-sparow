@@ -14,15 +14,12 @@ import Videobg from './Videobg';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-document.location.href="/";
-
 root.render(
   <React.StrictMode>
     <BrowserRouter>
         <Navbar />
-        
         <App />
-        <Videobg/>
+        <Videobg />
         <Routes>
           <Route exact path="/" element={<Home/>}></Route>
           <Route exact path="/contact" element={<Contact/>}></Route>
