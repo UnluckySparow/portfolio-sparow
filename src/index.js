@@ -5,6 +5,7 @@ import './index.css';
 import Contact from './components/Contact';
 import About from './components/About';
 import Home from './components/Home';
+import Skills from './components/Skills';
 import { Route,BrowserRouter,Routes } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import Navbar from './navbar/Navbar';
@@ -24,6 +25,7 @@ root.render(
           <Route exact path="/" element={<Home/>}></Route>
           <Route exact path="/contact" element={<Contact/>}></Route>
           <Route exact path="/about-me" element={<About/>}></Route>
+          <Route exact path="/my-skills" element={<Skills/>}></Route>
         </Routes>
       </BrowserRouter>
   </React.StrictMode>

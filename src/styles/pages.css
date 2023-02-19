@@ -64,7 +64,13 @@ button.btn-cv:hover:after{
 .firstcolor{
     color:#D72323
   }
-p{
+.fs-semibold{
+    font-weight: "600";
+}
+.fsbold{
+    font-weight: "700";
+}
+p,span{
     color: #a4acc4;
     font-family: 'Lato';
 }
@@ -221,8 +227,8 @@ img.myimg-aboutme {
             transform:translateY(-100%);
 }
 .modal-div {
-    max-height: 500px;
-    width: auto;
+    max-height: 80vh;
+    max-width: 90%;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -280,7 +286,7 @@ button.close_modal:hover {
     padding-right: 15px;
     position: relative;
 }
-h2.title_aboutme, h2.title_contactme{
+h2.title_aboutme, h2.title_contactme, h2.title_skills{
     text-align: left ;
     text-transform: uppercase;
     position: relative;
@@ -289,11 +295,11 @@ h2.title_aboutme, h2.title_contactme{
     width: 100%;
 
 }
-h2.title_aboutme span,h2.title_contactme span{
+h2.title_aboutme span,h2.title_contactme span,h2.title_skills span{
     position: relative;
     z-index: 3;
 }
-h2.title_aboutme span:before, h2.title_aboutme span:after, h2.title_contactme span:before, h2.title_contactme span:after{
+h2.title_aboutme span:before, h2.title_aboutme span:after, h2.title_contactme span:before, h2.title_contactme span:after,h2.title_skills span:before, h2.title_skills span:after{
     content: "";
     width: 40%;
     height: 5px;
@@ -304,7 +310,7 @@ h2.title_aboutme span:before, h2.title_aboutme span:after, h2.title_contactme sp
     border-radius: 50px;
     z-index: 1;
 }
-h2.title_aboutme span:after, h2.title_contactme span:after{
+h2.title_aboutme span:after, h2.title_contactme span:after, h2.title_skills span:after{
     z-index: 2;
     width: 20%;
     background-color: #D72323;
@@ -329,7 +335,7 @@ h2.title_aboutme span:after, h2.title_contactme span:after{
         width: 40%;
     }
 }
-h2.title_aboutme:before, h2.title_contactme:before{
+h2.title_aboutme:before, h2.title_contactme:before,h2.title_skills:before{
     content: "About-me";
     font-family: cursive;
     font-weight: 600;
@@ -518,6 +524,65 @@ input.btn-submit {
         -ms-transform: translateX(0%);
             transform: translateX(0%);
 }
+/* page skills */
+
+h2.title_skills:before{
+    content: "My-skills";
+}
+.skills {
+    width: 100%;
+    margin-top: 40px;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.div-skills {
+    width: 50%;
+    padding-inline: 1%;
+    margin-block:2%
+}
+
+.num-bande {
+    display: block;
+    width: calc(100% - 45px);
+    height: 9px;
+    background: #d723234a;
+    border-radius: 10px;
+    overflow:hidden;
+    margin-left: 10px;
+}
+.num-bande-skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+span.num-skills {
+    width: 35px;
+}
+.bande{background: #d72323;height: 100%;}
+.bandehtml{width: 95%;}
+.bandecss{width: 97%;}
+.bandejs{width: 86%;}
+.bandejquery{width: 90%;}
+.banderfc{width: 70%;}
+
 
 /* responsive */
 
@@ -566,6 +631,28 @@ input.btn-submit {
     .modal_img.showmodal {
         position: fixed;
         padding: 20px;
+    }
+    /* page about  */
+    .info-about-me {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        margin-top: 10px;
+    }
+
+    .info {
+        padding: 0px;
+    }
+}
+@media screen and (max-width : 620px){
+    .skills {
+        margin-top: 20px;
+    }
+    .div-skills {
+        width: 100%;
+        padding-inline: 0%;
+        margin-block: 2%;
     }
 }
 @media screen and (max-width : 500px){
