@@ -13,6 +13,7 @@ import './App.css';
 import './styles/pages.css';
 import Videobg from './Videobg';
 import App from './App';
+import Snake from './components/Snake';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,6 +27,7 @@ root.render(
           <Route exact path="/contact" element={<Contact/>}></Route>
           <Route exact path="/about-me" element={<About/>}></Route>
           <Route exact path="/my-skills" element={<Skills/>}></Route>
+          <Route exact path="/play-snake" element={<Snake/>}></Route>
         </Routes>
       </BrowserRouter>
   </React.StrictMode>
