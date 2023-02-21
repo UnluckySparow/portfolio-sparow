@@ -1,19 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
- function Snake() {
-
-    useEffect(() => {
-        document.addEventListener("keydown", this.onKeyPressed.bind(this));
-        return () => {
-            document.removeEventListener("keydown", this.onKeyPressed.bind(this));
-        }
-    })  
+ function Snake() { 
     
   return (
     
     <div className='container_snake'>
         <div className='espace_playing'>
-            <span onChange={HandleMove} className='snnake'></span>    
+            <span className='snake'></span>    
         </div>
     </div>
   )

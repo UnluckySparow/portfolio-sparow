@@ -13,6 +13,7 @@ function App() {
   };
 const { innerWidth: width } = window;
 let enterport =  0 ; 
+let doctype = document.title;
 useEffect(()=>{
   if(enterport === 0 ){
     if(width <= 800){
@@ -21,6 +22,14 @@ useEffect(()=>{
     }
     enterport++;
   }
+  setTimeout(() => {
+    window.addEventListener("blur" , () =>{
+      document.title = "Come back ! "
+    })
+    window.addEventListener("focus" , () =>{
+      document.title = doctype
+    })
+   }, 1000);
 })
 
 
