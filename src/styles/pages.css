@@ -1,5 +1,8 @@
 /* for all page */
-
+@import url('Snake.css');
+:root {
+    --awb-color1:#d72323
+}
 .pagecurrent {
     min-height: 100vh;
     overflow: hidden;

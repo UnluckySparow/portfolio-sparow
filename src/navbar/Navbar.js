@@ -34,6 +34,7 @@ return (
             <li Link onClick={buttonClickHandler} ><Link to="/about-me">About - me</Link></li>
             <li Link onClick={buttonClickHandler} ><Link to="/contact">Contact - me</Link></li>
             <li Link onClick={buttonClickHandler} ><Link to="/my-skills">My - Skills</Link></li>
+            <li Link onClick={buttonClickHandler} ><Link to="/play-snake">Snake</Link></li>
           </ul>
         </div>
         <div className='copyright_div'>

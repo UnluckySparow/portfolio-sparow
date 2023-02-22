@@ -1,0 +1,48 @@
+/* espace playing css */
+.nokia_mock {
+    width: 400px;
+    height: 400px;
+    border: 1px solid var(--awb-color1);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow:hidden;
+    flex-direction: column;
+}
+.container_snake {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.scorediv {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--awb-color1);
+    opacity: 0.8;
+}
+.gameOver{
+    position: absolute;
+    top: 35px;
+    bottom: 0px;
+    margin: auto;
+    width: 310px;
+    height: 310px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d723233a;
+    text-align: center;
+    color: #a4acc4;
+    z-index: 10;
+    font-weight: bold;
+    font-size: 30px;
+}
+.espace_playing {
+    /* background:#1b1b1b; */
+    background:#000;
+}

@@ -13,7 +13,7 @@ import './App.css';
 import './styles/pages.css';
 import Videobg from './Videobg';
 import App from './App';
-import Snake from './components/Snake';
+import Snake from './components/Gamesnake/Snake';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
