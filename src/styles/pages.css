@@ -614,6 +614,7 @@ span.num-skills {
     } 
 }
 @media screen and (max-width : 800px){
+    .spanmove{display: none;}
     @-webkit-keyframes charger {
         from{-webkit-filter: blur(10px);filter: blur(10px);-webkit-transform: translateY(100%);transform: translateY(100%);}
         to{-webkit-filter: blur(0px);filter: blur(0px);-webkit-transform: translateY(0%);transform: translateY(0%);}
