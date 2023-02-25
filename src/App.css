@@ -69,12 +69,17 @@
   --bs-code-color: #e83e8c;
   --bs-highlight-bg: #fdebd0;
 }
+body{
+  overflow: hidden;
+
+}
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   :root {

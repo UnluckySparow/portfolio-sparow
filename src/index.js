@@ -14,6 +14,7 @@ import './styles/pages.css';
 import Videobg from './Videobg';
 import App from './App';
 import Snake from './components/Gamesnake/Snake';
+import Cursor from './navbar/Cursor';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +23,7 @@ root.render(
         <Navbar />
         <App />
         <Videobg />
+        <Cursor/>
         <Routes>
           <Route exact path="/" element={<Home/>}></Route>
           <Route exact path="/contact" element={<Contact/>}></Route>
