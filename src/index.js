@@ -15,6 +15,7 @@ import Videobg from './Videobg';
 import App from './App';
 import Snake from './components/Gamesnake/Snake';
 import Cursor from './navbar/Cursor';
+import Show_blogs from './blogs/Show_blogs';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -30,6 +31,7 @@ root.render(
           <Route exact path="/about-me" element={<About/>}></Route>
           <Route exact path="/my-skills" element={<Skills/>}></Route>
           <Route exact path="/play-snake" element={<Snake/>}></Route>
+          <Route exact path="/blogs" element={<Show_blogs />}></Route>
         </Routes>
       </BrowserRouter>
   </React.StrictMode>
