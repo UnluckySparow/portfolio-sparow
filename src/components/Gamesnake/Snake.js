@@ -16,6 +16,7 @@ export default function Snake() {
   const [gameOver ,setGameOver] = useState(false)
   const [score , setScore] = useState(0);
   // intreval(()=> runGame(),delay);
+  // https://learntheweb.courses/courses/javascript/circle-mover/
   function checkCollision (head){
     for (let i = 0 ; i < head.length ; i++ ){
       if(head[i]<0 || head[i] * scale >= canvasX )

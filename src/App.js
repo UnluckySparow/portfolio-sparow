@@ -3,7 +3,8 @@ import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useEffect } from 'react';
-
+// import { useLocation } from 'react-router-dom';
+// function cursor design 
 
 function App() {
   const buttonClickHandler = () => {

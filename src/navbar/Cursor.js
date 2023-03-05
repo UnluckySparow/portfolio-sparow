@@ -6,7 +6,7 @@ export default function Cursor() {
 const Changeval = (e) => {
     setmoX(e.clientX);
     setmoY(e.clientY);
-   document.querySelector('.spanmove').style=`left:${moX}px;top:${moY}px`;
+    document.querySelector('.spanmove').style=`left:${moX}px;top:${moY}px`;
    
     }
  window.addEventListener('mousemove', Changeval);
